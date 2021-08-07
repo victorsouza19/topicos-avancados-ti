@@ -1,0 +1,22 @@
+{
+  "name": "nodejs",
+  "version": "1.0.0",
+  "description": "**Este repositório é dedicado aos estudos da matéria de Tópicos Avançados de TI** \r <br>**da FATEC Campinas** 💻\r <img src=\"https://raw.githubusercontent.com/MicaelliMedeiros/micaellimedeiros/master/image/computer-illustration.png\" min-width=\"400px\" max-width=\"400px\" width=\"400px\" align=\"right\" alt=\"Computer Victor Souza\">",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/victorsouza19/topicos-avancados-ti.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/victorsouza19/topicos-avancados-ti/issues"
+  },
+  "homepage": "https://github.com/victorsouza19/topicos-avancados-ti#readme",
+  "dependencies": {
+    "@types/node": "^16.4.13"
+  }
+}
