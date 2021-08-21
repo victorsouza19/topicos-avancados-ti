@@ -1,0 +1,1 @@
+// Funcionários efetivos possuem atributos de data de admissão e demissão.
