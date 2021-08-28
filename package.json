@@ -17,6 +17,9 @@
   },
   "homepage": "https://github.com/victorsouza19/topicos-avancados-ti#readme",
   "dependencies": {
-    "@types/node": "^16.4.13"
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "@types/node": "^16.7.4"
   }
 }
