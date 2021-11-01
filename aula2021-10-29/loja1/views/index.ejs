@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+  <title>Produtos</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--Bootstrap -->
+
+  <!--Versão minimizada do CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  
+  <!--Versão minimizada do JQuery -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+
+  <!--AJAX-jQuery - alterações sem precisar atualizar a página-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  
+  <!--Versão minimizada do Popper -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+  <!--Versão minimizada do Boostrap -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+  <script src="js/frontend.js" type="application/javascript"></script>
+</head>
+  <body class="bg-dark">
+    <div class="container">
+      <div class="card d-flex mt-5">
+        <div class="card-body">
+          <div class="d-flex justify-content-around align-items-center mt-4 mb-4">
+            <h1>Produtos</h1>
+            <input type="button" class="btn btn-primary" value="Novo..." onclick="incluir()">
+          </div>
+          
+          <table class="table table-hover table">
+            <thead class="thead-dark">
+              <tr>
+                <th>&nbsp;</th>
+                <th>&nbsp;</th>
+                <th>Código</th>
+                <th>Descrição</th>
+                <th>Preço</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% dados.forEach(function(item) { %>
+                <tr>
+                  <td>
+                    <img src="img/editar.png" width="24" onclick="editar(<%= item.codigo %>)" alt="Editar"/>
+                  </td>
+                  <td>
+                    <img src="img/deletar.png" width="24" onclick="deletar(<%= item.codigo %>)" alt="Deletar"/>
+                  </td>
+                  <td><%= item.codigo %></td>
+                  <td><%= item.descricao %></td>
+                  <td align="right"><%= item.preco.toFixed(2) %></td>
+                </tr>
+                <% }) %>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <!--Modal: Formulário -->
+      <%-include('editar-produto.ejs'); -%>
+      <!--Modal: Confirmação -->
+      <%-include('excluir-produto.ejs'); -%>
+    </div>
+  </body>
+</html>
